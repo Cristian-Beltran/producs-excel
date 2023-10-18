@@ -1,6 +1,10 @@
+import Nav from "@/components/Header"
+import MainSeccion from "@/components/Main"
+
 function PageCatalogo(){
     return<>
-    <h1>pagina principal</h1>
+    <Nav/>
+    <MainSeccion/>
     </>
 }
 export default PageCatalogo
