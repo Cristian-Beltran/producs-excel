@@ -1,18 +1,27 @@
-function Slider() {
-    
+'use client';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+
+function Slider (){
   return (
-    <>
-      <div className="w-7/12 border border-solid flex gap-2 max-sm:w-full max-sm:h-60 overflow-hidden">
-        <div className="h-full min-w-full  max-sm:min-w-full max-sm:min-h-full">
-          largo
-        </div>
-        <div className=" min-w-full max-sm:h-full max-sm:min-w-full">
-          {" "}
-          pequeños
-        </div>
-        <div className="min-w-full max-sm:min-w-full"> pequeños </div>
-      </div>
-    </>
-  );
-}
+  <>
+    <Swiper  spaceBetween={50}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+     >
+      <SwiperSlide className='min-w-full' >1</SwiperSlide>
+      <SwiperSlide>2</SwiperSlide>
+      <SwiperSlide>3</SwiperSlide>
+      <SwiperSlide>4</SwiperSlide>
+      <SwiperSlide>5</SwiperSlide>
+      
+     </Swiper>
+  </>
+    )
+};
+
 export default Slider;

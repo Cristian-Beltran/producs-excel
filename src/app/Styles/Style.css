@@ -1,8 +1,11 @@
 .fondo{
      background-image: url(./Images/ImagenEditada.png);
      background-repeat: no-repeat;
-     background-size: 100% 100%; 
+     background-size: 100% ; 
 }
 .bordeer{
      border: solid;
+}
+.bg_Per{
+     background-color: #f8f8fa;
 }

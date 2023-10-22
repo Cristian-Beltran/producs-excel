@@ -1,15 +1,16 @@
-import Slider from "./Slider";
+"use client";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-{
-  /* componente slider es de prueba,  
-  <img src="../Styles/Images/ImagenEditada.png" alt="" width={300} height={300} /> forma en la que estaba llamando a la imagen */
-}
+// Import Swiper styles
+import 'swiper/css';
+
 function MainSeccion() {
+
   return (
     <>
       <section className="w-full h-max flex justify-center pt-4">
         <div className="w-11/12 grid grid-cols-2 max-sm:grid-cols-1">
-          <div class="bg-orange-50  h-60 flex rounded-lg gap-2 p-4 m-4 max-sm:h-fit max-sm:flex-col  ">
+          <div className="bg_Per  h-60 flex rounded-lg gap-2 p-4 m-4 max-sm:h-fit max-sm:flex-col  ">
             <div className="w-7/12 border border-solid flex gap-2 max-sm:w-full max-sm:h-60 ">
               <div className="h-full w-7/12 border border-solid border-green-600   max-sm:min-w-full max-sm:min-h-full ">
                 largo
@@ -25,30 +26,45 @@ function MainSeccion() {
                 </div>
               </div>
             </div>
-            <div class="text-center mt-2 w-5/12 flex-wrap max-sm:w-full">
-              <p class="text-lg font-bold">Nombre del Producto</p>
-              <p class="text-sm font-semibold">Descripcion: si es que tiene </p>
-              <p class="text-gray-600">Precio unidad: $XX.XX</p>
-              <p class="text-gray-600">Precio docena: $XX.XX</p>
-              <p class="text-gray-600">Precio paquete: $XX.XX</p>
+            <div className="text-center mt-2 w-5/12 flex-wrap max-sm:w-full">
+              <p className="text-lg font-bold">Nombre del Producto</p>
+              <p className="text-sm font-semibold">Descripcion: si es que tiene </p>
+              <p className="text-gray-600">Precio unidad: $XX.XX</p>
+              <p className="text-gray-600">Precio docena: $XX.XX</p>
+              <p className="text-gray-600">Precio paquete: $XX.XX</p>
             </div>
           </div>
-          <div class="bg-orange-50  h-60 flex rounded-lg gap-2 p-4 m-4 max-sm:h-fit max-sm:flex-col  ">
-           <Slider/>
-            <div class="text-center mt-2 w-5/12 flex-wrap max-sm:w-full">
-              <p class="text-lg font-bold">Nombre del Producto</p>
-              <p class="text-sm font-semibold">Descripcion: si es que tiene </p>
-              <p class="text-gray-600">Precio unidad: $XX.XX</p>
-              <p class="text-gray-600">Precio docena: $XX.XX</p>
-              <p class="text-gray-600">Precio paquete: $XX.XX</p>
+          <div className="bg_Per  h-60 flex rounded-lg gap-2 p-4 m-4 max-sm:h-fit max-sm:flex-col  ">
+            <div className='w-7/12 border border-solid flex gap-2 max-sm:w-full max-sm:h-60'>
+              <Swiper 
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  onSlideChange={() => console.log('slide change')}
+                  onSwiper={(swiper) => console.log(swiper)}
+                
+                >
+                <SwiperSlide className='min-w-full'>1</SwiperSlide>
+                <SwiperSlide className='min-w-full'>2</SwiperSlide>
+                <SwiperSlide className='min-w-full'>3</SwiperSlide>
+                <SwiperSlide className='min-w-full'>4</SwiperSlide>
+                <SwiperSlide className='min-w-full'>5</SwiperSlide>
+                
+              </Swiper>
+            </div>
+            <div className="text-center mt-2 w-5/12 flex-wrap max-sm:w-full">
+              <p className="text-lg font-bold">Nombre del Producto</p>
+              <p className="text-sm font-semibold">Descripcion: si es que tiene </p>
+              <p className="text-gray-600">Precio unidad: $XX.XX</p>
+              <p className="text-gray-600">Precio docena: $XX.XX</p>
+              <p className="text-gray-600">Precio paquete: $XX.XX</p>
             </div>
           </div>
 
-          <div class="bg-orange-50 rounded-lg shadow-lg p-4 m-4">
+          <div className="bg-orange-50 rounded-lg shadow-lg p-4 m-4">
             <div>imagen</div>
-            <div class="text-center mt-2">
-              <p class="text-lg font-bold">Nombre del Producto</p>
-              <p class="text-gray-600">Precio: $XX.XX</p>
+            <div className="text-center mt-2">
+              <p className="text-lg font-bold">Nombre del Producto</p>
+              <p className="text-gray-600">Precio: $XX.XX</p>
             </div>
           </div>
         </div>
